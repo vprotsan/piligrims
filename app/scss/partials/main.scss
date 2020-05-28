@@ -2,14 +2,21 @@ html {
     font-family: $body-text1;
     font-size: $font-size-base;
     color: #ffffff;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+
 
     body {
+        width: 100%;
+        height: 100%;
         min-width: 100%;
         min-height: 100%;
         // background: $bg-color url('../images/Pilgrims.png') no-repeat;
         background: $bg-color;
         background-position: top center;
-        min-width: 600px;
+        // min-width: 600px;
     }
 
     img {
@@ -22,19 +29,33 @@ html {
 
     .buttons {
         display: flex;
-        justify-content: space-between;
-        max-width: 670px;
+        flex-direction: column;
         margin: 0 auto;
         // margin-top: 650px;
 
-        button {
+        @include mq("tablet-small"){
+            justify-content: space-between;
+            flex-direction: row;
+            max-width: 670px;
+        }
+
+        button{
             padding: 0.35em 2em;
             cursor: pointer;
             transition: all 0.2s linear;
 
-            &:hover {
-                background: darken(#db1d21, 10%)
+            @include mq("tablet-small"){
+
             }
+
+            &:hover {
+                background: darken(#db1d21, 10%);
+            }
+        }
+
+        button.form-submit  {
+            margin: 0 auto 1em;
+            display: block;
         }
     }
 
@@ -42,7 +63,7 @@ html {
         margin-bottom: 4rem;
         max-width: 270px;
         margin: 0.2em auto 3em;
-        margin-top: -64px;
+        margin-top: -30px;
         text-align: center;
 
         @include mq("tablet-small"){
@@ -50,7 +71,7 @@ html {
         }
 
         &.ecg {
-            margin-top: -100px;
+            margin-top: -42px;
 
             @include mq("tablet-small"){
                 margin-top: -140px;
@@ -114,19 +135,30 @@ html {
         // justify-content: center;
         // display: flex;
         margin: 2em auto;
-        width: 450px;
+        // width: 450px;
         padding-bottom: 1em;
 
+        @include mq("tablet-small"){
+            width: 450px;
+        }
+
         li {
-            float:left;
+           text-align: center;
+
+            @include mq("tablet-small"){
+                float:left;
+            }
 
             a {
                 font-size: 14px;
                 padding: 0 15px;
                 color: #ffffff;
-                border-right: 1px solid #ffffff;
                 text-decoration: none;
                 cursor: pointer;
+
+                @include mq("tablet-small"){
+                    border-right: 1px solid #ffffff;
+                }
 
                 &:hover {
                     text-decoration: underline;
@@ -136,7 +168,10 @@ html {
 
         li:last-child {
             a {
-                border-right: none;
+
+                @include mq("tablet-small"){
+                    border-right: none;
+                }
             }
         }
     }
