@@ -1,0 +1,143 @@
+html {
+    font-family: $body-text1;
+    font-size: $font-size-base;
+    color: #ffffff;
+
+    body {
+        min-width: 100%;
+        min-height: 100%;
+        // background: $bg-color url('../images/Pilgrims.png') no-repeat;
+        background: $bg-color;
+        background-position: top center;
+        min-width: 600px;
+    }
+
+    img {
+        max-width: 796px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 670px;
+        margin: 0 auto;
+        // margin-top: 650px;
+
+        button {
+            padding: 0.35em 2em;
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+            &:hover {
+                background: darken(#db1d21, 10%)
+            }
+        }
+    }
+
+    form {
+        margin-bottom: 4rem;
+        max-width: 270px;
+        margin: 0.2em auto 3em;
+        margin-top: -64px;
+        text-align: center;
+
+        @include mq("tablet-small"){
+            margin-top: -90px;
+        }
+
+        &.ecg {
+            margin-top: -100px;
+
+            @include mq("tablet-small"){
+                margin-top: -140px;
+            }
+        }
+
+        h1 {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        & > div:first-child input {
+            margin-bottom: 0.7em;
+        }
+    }
+
+    input::-webkit-input-placeholder {color:#d3d3d3;}
+    input::-moz-placeholder {color:#d3d3d3;}/* Firefox 19+ */
+    input:-moz-placeholder  {color:#d3d3d3;}/* Firefox 18- */
+    input:-ms-input-placeholder {color:#d3d3d3;}
+
+
+    %form-field {
+        font-family: $body-text1;
+        font-size: 1.5rem;
+        border-radius: 12px;
+        box-shadow: none;
+        border: 0;
+        padding: 0.5rem;
+        text-align: center;
+        width: 100%;
+        margin: 0.5rem auto;
+        box-sizing : border-box;
+    }
+    .form-input {
+        @extend %form-field;
+    }
+
+    label {
+        font-weight: 800;
+    }
+
+    .form-submit {
+        @extend %form-field;
+        background-color: #db1d21;
+        color: #ffffff;
+        font-weight: 800;
+        max-width: 195px;
+        margin: 0.8rem auto 3em;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+            background: darken(#db1d21, 10%)
+        }
+    }
+
+    ul {
+        // justify-content: center;
+        // display: flex;
+        margin: 2em auto;
+        width: 450px;
+        padding-bottom: 1em;
+
+        li {
+            float:left;
+
+            a {
+                font-size: 14px;
+                padding: 0 15px;
+                color: #ffffff;
+                border-right: 1px solid #ffffff;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        li:last-child {
+            a {
+                border-right: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+input {
+  padding: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  html body {
+    min-width: 100%;
+    min-height: 100%;
+    background: #2d3092;
+    background-position: top center;
+    min-width: 600px; }
+  html img {
+    max-width: 796px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
+  html .buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 670px;
+    margin: 0 auto; }
+    html .buttons button {
+      padding: 0.35em 2em;
+      cursor: pointer;
+      transition: all 0.2s linear; }
+      html .buttons button:hover {
+        background: #ae171a; }
+  html form {
+    margin-bottom: 4rem;
+    max-width: 270px;
+    margin: 0.2em auto 3em;
+    margin-top: -64px;
+    text-align: center; }
+    @media only screen and (min-width: 640px) {
+      html form {
+        margin-top: -90px; } }
+    html form.ecg {
+      margin-top: -100px; }
+      @media only screen and (min-width: 640px) {
+        html form.ecg {
+          margin-top: -140px; } }
+    html form h1 {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2em;
+      text-align: center; }
+    html form > div:first-child input {
+      margin-bottom: 0.7em; }
+  html input::-webkit-input-placeholder {
+    color: #d3d3d3; }
+  html input::-moz-placeholder {
+    color: #d3d3d3; }
+  html input:-moz-placeholder {
+    color: #d3d3d3; }
+  html input:-ms-input-placeholder {
+    color: #d3d3d3; }
+  html .form-input, html .form-submit {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    box-shadow: none;
+    border: 0;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem auto;
+    box-sizing: border-box; }
+  html label {
+    font-weight: 800; }
+  html .form-submit {
+    background-color: #db1d21;
+    color: #ffffff;
+    font-weight: 800;
+    max-width: 195px;
+    margin: 0.8rem auto 3em;
+    cursor: pointer;
+    transition: all 0.2s linear; }
+    html .form-submit:hover {
+      background: #ae171a; }
+  html ul {
+    margin: 2em auto;
+    width: 450px;
+    padding-bottom: 1em; }
+    html ul li {
+      float: left; }
+      html ul li a {
+        font-size: 14px;
+        padding: 0 15px;
+        color: #ffffff;
+        border-right: 1px solid #ffffff;
+        text-decoration: none;
+        cursor: pointer; }
+        html ul li a:hover {
+          text-decoration: underline; }
+    html ul li:last-child a {
+      border-right: none; }
